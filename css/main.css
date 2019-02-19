@@ -18,7 +18,7 @@ display:table;
   font-size:25px;
 }
 
-.table-header-cell{
+.table-header{
 display: table-cell;
 padding: 10px;
 text-align: justify;
