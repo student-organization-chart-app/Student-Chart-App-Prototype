@@ -5,6 +5,7 @@ display:table;
 
 .resp-table-caption {
   display:table-caption;
+.resp-table-caption{
   text-align: center;
   font-size:30px;
   font-weight: bold;
