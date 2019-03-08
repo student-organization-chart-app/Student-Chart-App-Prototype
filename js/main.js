@@ -13,9 +13,9 @@ var createNewTask = function(task){
   console.log("Creating task...");
 
   //SET UP THE NEW LIST ITEM
-  var listItem = document.createElement("li"); //<li>
-  var checkBox = document.createElement("input"); //checkbox
-  var label = document.createElement("label"); // <label>
+  var listItem = document.createElement("li");
+  var checkBox = document.createElement("input");
+  var label = document.createElement("label");
 
 
   //PULL THE INPUTED TEXT INTO LABEL
@@ -53,7 +53,7 @@ var completeTask = function(){
   var listItem = this.parentNode;
 
   //CREATE AND INSERT THE DELETE BUTTON
-  var deleteBtn = document.createElement("button"); // <button>
+  var deleteBtn = document.createElement("button"); 
   deleteBtn.innerText ="Delete";
   deleteBtn.className = "delete";
   listItem.appendChild(deleteBtn);
