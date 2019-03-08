@@ -13,57 +13,39 @@
 
 <h1>2019 Study Planner</h1>
 
-  <table id="Organization">
-    <tr>
-      <th class="category-1">Subjects</th>
-      <th class="category-2">Assignments</th>
-      <th class="category-3">Due Dates</th>
-      <th class="category-4">Completion</th>
-    </tr>
+<section class="container">
 
-    <tr>
-      <td>Geometry</td>
-      <td>Geometric Mean</td>
-      <td>February 10</td>
-      <td>Complete</td>
-    </tr>
+<h1>To-Do App</h1>
 
-    <tr>
-      <td>English</td>
-      <td>Academic Spelling Vocabulary List</td>
-      <td>February 11</td>
-      <td>Complete</td>
-    </tr>
+<div class="new-task-container box">
 
-    <tr>
-      <td>Chemistry</td>
-      <td>Ch.8 Balancing Chemical Equations</td>
-      <td>February 22</td>
-      <td>Complete</td>
-    </tr>
+<label for="new-task">Add New Task</label>
+<input type="text" id="new-task">
+  <button id="addTask">Add Task</button>
 
-    <tr>
-      <td>Math</td>
-      <td>1.1 Function Notation</td>
-      <td>March 01</td>
-      <td>Incomplete</td>
-    </tr>
+</div>
 
+<div class="todo-list box">
 
-    <tr>
-      <td>French</td>
-      <td>Using Nous, Vous, Allons</td>
-      <td>March 15</td>
-      <td>Incomplete</th>
-    </tr>
+  <h2>Incomplete Tasks</h2>
+  <ul>
+    <li><input type="checkbox"><label>Task Name</lable></li>
+    <li><input type="checkbox"><label>Task Name</lable></li>
+    <li><input type="checkbox"><label>Task Name</lable></li>
+  </ul>
 
-    <tr>
-      <td>Add Subject +</td>
-      <td>Add Assignment +</td>
-      <td>Add Due Date +</td>
-      <td></th>
-    </tr>
-</table>
+</div><!--/todo-list-->
+
+<div class="complete-list box">
+
+  <h2>Completed Tasks</h2>
+  <ul>
+    <li>Task Name <button class="delete">Delete</button></li>
+
+  </ul>
+
+</div><!--/complete-list-->
+</section><!--/container-->
 
 
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
