@@ -53,7 +53,7 @@ var completeTask = function(){
   var listItem = this.parentNode;
 
   //CREATE AND INSERT THE DELETE BUTTON
-  var deleteBtn = document.createElement("button"); 
+  var deleteBtn = document.createElement("button");
   deleteBtn.innerText ="Delete";
   deleteBtn.className = "delete";
   listItem.appendChild(deleteBtn);
@@ -101,7 +101,7 @@ var bindCompleteItems = function(taskItem, deleteButtonPress){
   //BIND THE DELETE BUTTON
   var deleteButton = taskItem.querySelector(".delete");
 
-  //WHEN THE DELETE BUTTIN IS PRESSED, RUN THE deleteTask function
+  //WHEN THE DELETE BUTTON IS PRESSED, RUN THE deleteTask function
   deleteButton.onclick = deleteButtonPress;
 
 };
