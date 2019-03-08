@@ -94,7 +94,7 @@ var bindIncompleteItems = function(taskItem, checkBoxClick){
 };
 
 
-//A FUNCTIONM THAT BINDS EACH OF THE ELEMTS IN THE COMPLETE LIST
+//A FUNCTION THAT BINDS EACH OF THE ELEMENTS IN THE COMPLETE LIST
 var bindCompleteItems = function(taskItem, deleteButtonPress){
   console.log("Binding the complete list...");
 
