@@ -5,6 +5,9 @@ var addTaskBtn = document.querySelector('#addTask');
 var toDoUl = document.querySelector(".todo-list ul");
 var completeUl =  document.querySelector(".complete-list ul");
 
+
+//CREATE FUNCTIONS
+
 //CREATING THE ACTUAL TASK LIST ITEM
 var createNewTask = function(task){
   console.log("Creating task...");
@@ -26,6 +29,7 @@ var createNewTask = function(task){
   listItem.appendChild(label);
   //EVERYTHING PUT TOGETHER
   return listItem;
+
 };
 
 //ADD THE NEW TASK INTO ACTUAL INCOMPLETE LIST
@@ -40,6 +44,30 @@ var addTask = function(){
 
   //BIND THE NEW LIST ITEM TO THE INCOMPLETE LIST
   bindIncompleteItems(listItem, completeTask);
+
+};
+
+var completeTask = function(){
+
+  //GRAB THE CHECKBOX'S PARENT ELEMENT, THE LI IT'S IN
+  var listItem = this.parentNode;
+
+  //CREATE AND INSERT THE DELETE BUTTON
+  var deleteBtn = document.createElement("button"); // <button>
+  deleteBtn.innerText ="Delete";
+  deleteBtn.className = "delete";
+  listItem.appendChild(deleteBtn);
+
+  //SELECT THE CHECKBOX FROM THE COMPLETED CHECKBOX AND REMOVE IT
+  var checkBox = listItem.querySelector("input[type=checkbox]");
+  checkBox.remove();
+
+  //PLACE IT INSIDE THE COMPLETED LIST
+  completeUl.appendChild(listItem);
+
+  //BIND THE NEW COMPLETED LIST
+  bindCompleteItems(listItem, deleteTask);
+
 };
 
 //DELETE TASK FUNCTIONS
@@ -50,6 +78,7 @@ var deleteTask = function(){
   var ul = listItem.parentNode;
 
   ul.removeChild(listItem);
+
 };
 
 //A FUNCTION THAT BINDS EACH OF THE ELEMENTS THE INCOMPLETE LIST
@@ -85,5 +114,6 @@ for(var i=0; i < toDoUl.children.length; i++) {
 for(var i=0; i < completeUl.children.length; i++) {
   bindCompleteItems(completeUl.children[i], deleteTask);
 }
+
 
 addTaskBtn.addEventListener("click", addTask);
